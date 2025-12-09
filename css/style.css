@@ -230,7 +230,7 @@ footer {
 
 .book .title {
   font-family: "D2Coding", monospace;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 1px;
 }
@@ -244,6 +244,7 @@ footer {
 .book .done {
   margin-bottom: 4px;
 }
+
 
 
 
