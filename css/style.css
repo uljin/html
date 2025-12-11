@@ -1,10 +1,20 @@
 @charset "UTF-8";
 
+/* 기본 폰트 */
 @font-face {
     font-family: 'RoundedFixedsys';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
     font-weight: normal;
     font-display: swap;
+}
+
+/* 박스 모델 통일 */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
@@ -13,8 +23,11 @@ body {
   color: #2E2E2E;
   line-height: 1.8;
   background-color: #F5F5E4;
+  margin: 0;
+  padding: 0;
 }
 
+/* 텍스트 기본 */
 p {
   text-align: justify;
 }
@@ -29,48 +42,33 @@ a:focus {
   text-decoration: underline;
 }
 
-
-main {
-  min-height: calc(100vh - 65px);
-}
-
+/* 레이아웃: @media 없어도 반응형 */
 main,
 footer {
- position: relative;
-  width: 720px;
-  margin: 0 auto;
-  padding: 80px;
+  position: relative;
+  width: 100%;
+  max-width: 800px;      /* 컨텐츠가 너무 넓지 않게 상한선 */
+  margin: 0 auto;        /* 가운뎃 정렬 */
+  padding: 40px 20px;    /* 모바일~데스크톱 공통으로 안전한 패딩 */
 }
 
+/* 섹션 간 여백 */
 main section,
 footer section {
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 
-@media screen and (max-width: 1099px) {
-  main,
-  footer {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  main,
-  footer {
-    padding: 40px 10px;
-  }
-}
-
+/* 이미지: 자동 반응형 */
 img {
   width: 100%;
-  max-width: 360px;
+  max-width: 480px;
   margin: 0 auto;
   display: block;
 }
 
-
+/* 푸터 */
 footer {
   text-align: center;
-  padding: 20px;
+  padding-bottom: 40px;
 }
